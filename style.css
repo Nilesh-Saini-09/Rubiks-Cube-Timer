@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+/* disable text-selection */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.3);
+
+  /* the rest of your styling */
+}
+
+/* Puzzle input in navbar */
+#puzzle {
+  padding: 3px;
+
+  height: 30px;
+  width: 150px;
+  border-radius: 10px;
+  text-align-last: center;
+  font-size: 17px;
+  border-style: none;
+  outline: none;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+/* Hover over nav elems */
+
+.style a:hover {
+  /* border-top: 4px solid white; */
+  border-bottom: 2px solid white;
+  padding: 6px 0;
+  background-color: #f04e3e;
+}
+
+#nav-logo {
+  max-height: 40px;
+  max-width: 30%;
+  overflow: visible;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Body */
+
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-top: 20px;
+  color: white;
+}
+
+.split-left {
+  width: 80%;
+  left: 0;
+  background-color: #a3dacc;
+  color: #222222;
+}
+
+#stats {
+  width: 270px;
+  height: 120px;
+  padding-top: 2%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Yusei Magic", sans-serif;
+  letter-spacing: 2px;
+  background-color: #f04e3e;
+  color: whitesmoke;
+  cursor: pointer;
+  top: 80%;
+  left: 5%;
+  border-radius: 5px;
+  outline: none;
+}
+
+#stats:hover {
+  filter: brightness(110%);
+}
+
+#stats span:hover {
+  background: whitesmoke;
+  padding: 1px;
+  border-radius: 5px;
+  color: #f04e3e;
+}
+
+.split-right {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #f04e3e;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: "Yusei Magic", sans-serif;
+  box-shadow: -8px 0 8px 1px rgba(51, 51, 51, 0.774);
+}
+
+.split-right #heading {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2em;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2px 1px 0;
+}
+
+.split-right #clear {
+  position: absolute;
+  top: 18%;
+  left: 29%;
+  margin-top: 15px;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.7rem;
+  outline: none;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#puzzleSelected {
+  position: absolute;
+  top: 25%;
+  left: 39%;
+  margin-top: 15px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.842);
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: red;
+  padding: 2px 10px;
+}
+
+.split-right a {
+  color: rgba(255, 255, 255, 0.897);
+  outline: none;
+  text-decoration: none;
+}
+
+a:focus {
+  cursor: pointer;
+}
+
+.split-right #listOfTime {
+  top: 29%;
+  left: 50%;
+  width: 90%;
+  height: 60%;
+  border: 1px solid #333;
+  background-color: rgba(255, 255, 255, 0.808);
+  color: #222222;
+  margin: 77% auto 0 auto;
+  padding: 8px;
+  overflow-y: auto;
+  scroll-behavior: auto smooth;
+}
+
+/* adjusting scramble position */
+#scram {
+  margin-top: 2%;
+  margin-left: 25px;
+
+  padding: 5px;
+}
+
+#scrmb {
+  margin-top: 5%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  transition: 0.5s;
+}
+
+#scrmb h3 {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+#scrmb i {
+  margin-left: 15px;
+  border-radius: 50%;
+}
+
+#scrmb i:hover {
+  cursor: pointer;
+  background-color: #222222;
+  outline: none;
+  border-radius: 50%;
+  padding: 6px;
+  color: #fff;
+  transition: 0.5s ease-out;
+}
+
+/* solve time in the middle */
+
+#displayTime {
+  width: 310px;
+  height: 100px;
+  font-size: 5em;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 128.5px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+/* Buttons */
+footer {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+#broughtBy {
+  position: absolute;
+  left: 45%;
+  bottom: 5px;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+
+button:hover {
+  filter: brightness(110%);
+  background-color: #38a1f3;
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.twitter-button:hover {
+  color: #fff;
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
+}
